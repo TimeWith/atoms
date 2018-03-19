@@ -1,4 +1,4 @@
-# Timewith colors
+# Timewith Atoms
 
 ## Install
 
