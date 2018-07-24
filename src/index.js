@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import glamorous from 'glamorous'
+import styled from 'react-emotion'
 import { blue, grey_medium } from '@time-with/colors'
 import { 
   phone,   phone_min,   phone_max,
@@ -9,7 +9,7 @@ import {
   hd,      hd_min,      hd_max
 } from '@time-with/media-queries'
 
-export const Headline = glamorous.h1({
+export const Headline = styled.h1({
   fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '64px',
@@ -22,7 +22,7 @@ export const Headline = glamorous.h1({
   [phone]:   { fontSize: '32px' },
 })
 
-export const Headline2 = glamorous.h2({
+export const Headline2 = styled.h2({
   fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '48px',
@@ -35,7 +35,7 @@ export const Headline2 = glamorous.h2({
   [phone]:   { fontSize: '28px' },
 })
 
-export const Headline3 = glamorous.h3({
+export const Headline3 = styled.h3({
   fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '38px',
@@ -48,7 +48,7 @@ export const Headline3 = glamorous.h3({
   [phone]:   { fontSize: '18px' },
 })
 
-export const Headline4 = glamorous.h4({
+export const Headline4 = styled.h4({
   fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '32px',
@@ -61,7 +61,7 @@ export const Headline4 = glamorous.h4({
   [phone]:   { fontSize: '16px' },
 })
 
-export const Headline5 = glamorous.h5({
+export const Headline5 = styled.h5({
   fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '28px',
@@ -75,7 +75,7 @@ export const Headline5 = glamorous.h5({
   [phone]:   { fontSize: '14px' },
 })
 
-export const Headline6 = glamorous.h6({
+export const Headline6 = styled.h6({
   fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '20px',
@@ -89,7 +89,7 @@ export const Headline6 = glamorous.h6({
   [phone]:   { fontSize: '12px' },
 })
 
-export const Subline = glamorous.h2({
+export const Subline = styled.h2({
   fontFamily: 'proxima-soft',
   fontSize: '36px',
   marginBottom: '10px',
@@ -102,7 +102,7 @@ export const Subline = glamorous.h2({
   [phone]:   { fontSize: '24px', marginBottom: '8px',  lineHeight: '30px' },
 })
 
-export const SublineSmall = glamorous.h2({
+export const SublineSmall = styled.h2({
   fontFamily: 'proxima-soft',
   fontSize: '36px',
   marginBottom: '10px',
@@ -115,7 +115,7 @@ export const SublineSmall = glamorous.h2({
   [phone]:   { fontSize: '24px', marginBottom: '8px',  lineHeight: '30px' },
 })
 
-export const Paragraph = glamorous.p({
+export const Paragraph = styled.p({
   fontFamily: 'proxima-soft',
   fontSize: '20px',
   lineHeight: '160%',
@@ -128,7 +128,7 @@ export const Paragraph = glamorous.p({
   [phone]:   { fontSize: '16px', marginBottom: '15px' },
 })
 
-export const ParagraphLarge = glamorous.p({
+export const ParagraphLarge = styled.p({
   fontFamily: 'proxima-soft',
   fontSize: '26px',
   lineHeight: '160%',
@@ -141,7 +141,7 @@ export const ParagraphLarge = glamorous.p({
   [phone]:   { fontSize: '18px', marginBottom: '15px' },
 })
 
-export const Li_underlined = glamorous.li({
+export const Li_underlined = styled.li({
   cursor: 'pointer',
   paddingTop: '13px',
   borderBottom: '1px solid #E8E8E8',
@@ -150,7 +150,7 @@ export const Li_underlined = glamorous.li({
   },
 })
 
-export const Tag = glamorous.div({
+export const Tag = styled.div({
   border: '2px solid ' + blue,
   color: blue,
   display: 'inline-block',
@@ -200,62 +200,62 @@ export class Paragraphs extends Component {
 
 
 // inline-block div
-export const IBDiv = glamorous.div({
+export const IBDiv = styled.div({
   display: 'inline-block',
   verticalAlign: 'top'
 })
 // becomes 100% width on phone
-export const IBDivPhone = glamorous.div({
+export const IBDivPhone = styled.div({
   display: 'inline-block',
   verticalAlign: 'top',
   [phablet_max]: { display: 'block', width: '100%' },
 })
 // becomes 100% width on phablet
-export const IBDivPhablet = glamorous.div({
+export const IBDivPhablet = styled.div({
   display: 'inline-block',
   verticalAlign: 'top',
   [tablet_max]: { display: 'block', width: '100%' },
 })
 
 
-export const DivHdMin      = glamorous.div({ [desktop_max]: { display: 'none' } })
-export const DivDesktopMin = glamorous.div({ [tablet_max]:  { display: 'none' } })
-export const DivTabletMin  = glamorous.div({ [phablet_max]: { display: 'none' } })
-export const DivPhabletMin = glamorous.div({ [phone_max]:   { display: 'none' } })
+export const DivHdMin      = styled.div({ [desktop_max]: { display: 'none' } })
+export const DivDesktopMin = styled.div({ [tablet_max]:  { display: 'none' } })
+export const DivTabletMin  = styled.div({ [phablet_max]: { display: 'none' } })
+export const DivPhabletMin = styled.div({ [phone_max]:   { display: 'none' } })
 
-export const DivDesktopMax = glamorous.div({ [hd_min]:      { display: 'none' } })
-export const DivPhabletMax = glamorous.div({ [tablet_min]:  { display: 'none' } })
-export const DivTabletMax  = glamorous.div({ [desktop_min]: { display: 'none' } })
+export const DivDesktopMax = styled.div({ [hd_min]:      { display: 'none' } })
+export const DivPhabletMax = styled.div({ [tablet_min]:  { display: 'none' } })
+export const DivTabletMax  = styled.div({ [desktop_min]: { display: 'none' } })
 
-export const DivHdOnly = glamorous.div({
+export const DivHdOnly = styled.div({
   [hd]:       { display: 'block' },
   [desktop]:  { display: 'none' },
   [tablet]:   { display: 'none' },
   [phablet]:  { display: 'none' },
   [phone]:    { display: 'none' },
 })
-export const DivDesktopOnly = glamorous.div({
+export const DivDesktopOnly = styled.div({
   [hd]:       { display: 'none' },
   [desktop]:  { display: 'block' },
   [tablet]:   { display: 'none' },
   [phablet]:  { display: 'none' },
   [phone]:    { display: 'none' },
 })
-export const DivTabletOnly = glamorous.div({
+export const DivTabletOnly = styled.div({
   [hd]:       { display: 'none' },
   [desktop]:  { display: 'none' },
   [tablet]:   { display: 'block' },
   [phablet]:  { display: 'none' },
   [phone]:    { display: 'none' },
 })
-export const DivPhabletOnly = glamorous.div({
+export const DivPhabletOnly = styled.div({
   [hd]:       { display: 'none' },
   [desktop]:  { display: 'none' },
   [tablet]:   { display: 'none' },
   [phablet]:  { display: 'block' },
   [phone]:    { display: 'none' },
 })
-export const DivPhoneOnly = glamorous.div({
+export const DivPhoneOnly = styled.div({
   [hd]:       { display: 'none' },
   [desktop]:  { display: 'none' },
   [tablet]:   { display: 'none' },
