@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.DivPhoneOnly = exports.DivPhabletOnly = exports.DivTabletOnly = exports.DivDesktopOnly = exports.DivHdOnly = exports.DivTabletMax = exports.DivPhabletMax = exports.DivDesktopMax = exports.DivPhabletMin = exports.DivTabletMin = exports.DivDesktopMin = exports.DivHdMin = exports.IBDivPhablet = exports.IBDivPhone = exports.IBDiv = exports.Paragraphs = exports.Separator = exports.Tag = exports.Li_underlined = exports.ParagraphLarge = exports.Paragraph = exports.SublineSmall = exports.Subline = exports.Headline6 = exports.Headline5 = exports.Headline4 = exports.Headline3 = exports.Headline2 = exports.Headline = undefined;
+exports.TextDivP = exports.P = exports.H3 = exports.H1 = exports.Box = exports.DivPhoneOnly = exports.DivPhabletOnly = exports.DivTabletOnly = exports.DivDesktopOnly = exports.DivHdOnly = exports.DivTabletMax = exports.DivPhabletMax = exports.DivDesktopMax = exports.DivPhabletMin = exports.DivTabletMin = exports.DivDesktopMin = exports.DivHdMin = exports.IBDivPhablet = exports.IBDivPhone = exports.IBDiv = exports.Paragraphs = exports.Separator = exports.Tag = exports.Li_underlined = exports.ParagraphLarge = exports.Paragraph = exports.SublineSmall = exports.Subline = exports.Headline6 = exports.Headline5 = exports.Headline4 = exports.Headline3 = exports.Headline2 = exports.Headline = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _styled, _styled2, _styled3, _styled4, _styled5, _styled6, _styled7, _styled8, _styled9, _styled10, _styled21, _styled22, _styled23, _styled24, _styled25;
+var _styled, _styled2, _styled3, _styled4, _styled5, _styled6, _styled7, _styled8, _styled9, _styled10, _styled21, _styled22, _styled23, _styled24, _styled25, _styled26, _standardTextStyle;
 
 var _react = require('react');
 
@@ -30,6 +30,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var colorSelect = function colorSelect(props) {
+  switch (props.color) {
+    case 'white':
+      return 'white';
+    case 'grey':
+      return grey;
+    case 'blue':
+      return _colors.blue;
+    case 'green':
+      return green;
+    case 'orange':
+      return orange;
+    case 'grey_dark':
+      return grey_dark;
+    case 'grey_darker':
+      return grey_darker;
+    default:
+      return grey;
+  }
+};
 
 var Headline = /*#__PURE__*/exports.Headline = (0, _reactEmotion2.default)('h1', {
   target: 'e4u1u2g0'
@@ -292,4 +313,94 @@ var DivPhabletOnly = /*#__PURE__*/exports.DivPhabletOnly = (0, _reactEmotion2.de
 var DivPhoneOnly = /*#__PURE__*/exports.DivPhoneOnly = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g26'
 })((_styled25 = {}, _defineProperty(_styled25, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.phone, { display: 'block' }), _styled25));
+
+var Box = /*#__PURE__*/exports.Box = (0, _reactEmotion2.default)('div', {
+  target: 'e4u1u2g27'
+})((_styled26 = {
+  padding: '40px'
+}, _defineProperty(_styled26, _mediaQueries.tablet_max, {
+  padding: '30px'
+}), _defineProperty(_styled26, _mediaQueries.phablet_max, {
+  padding: '25px'
+}), _defineProperty(_styled26, _mediaQueries.phone_max, {
+  padding: '15px'
+}), _styled26), function (props) {
+  return {
+    backgroundColor: props.color ? colorSelect(props) : 'white',
+    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.25)' : 'none',
+    padding: props.noPadding ? '0 !important' : null
+  };
+});
+
+var H1 = /*#__PURE__*/exports.H1 = (0, _reactEmotion2.default)('h1', {
+  target: 'e4u1u2g28'
+})({
+  fontSize: '38px',
+  lineHeight: '120%',
+  fontWeight: 'bold',
+  margin: '0'
+}, function (props) {
+  var _ref;
+
+  return _ref = {
+    color: colorSelect(props),
+    fontSize: props.size === 'large' ? '40px' : '38px'
+  }, _defineProperty(_ref, _mediaQueries.tablet_max, {
+    fontSize: props.size === 'large' ? '36px' : '34px'
+  }), _defineProperty(_ref, _mediaQueries.phablet_max, {
+    fontSize: props.size === 'large' ? '32px' : '30px'
+  }), _defineProperty(_ref, _mediaQueries.phone_max, {
+    fontSize: props.size === 'large' ? '30px' : '26px'
+  }), _ref;
+});
+
+var H3 = /*#__PURE__*/exports.H3 = (0, _reactEmotion2.default)('h3', {
+  target: 'e4u1u2g29'
+})({
+  lineHeight: '140%',
+  fontWeight: 'bold',
+  margin: '0'
+}, function (props) {
+  var _ref2;
+
+  return _ref2 = {
+    color: colorSelect(props),
+    fontSize: props.size === 'small' ? '20px' : '26px'
+  }, _defineProperty(_ref2, _mediaQueries.tablet_max, {
+    fontSize: props.size === 'small' ? '18px' : '23px'
+  }), _defineProperty(_ref2, _mediaQueries.phablet_max, {
+    fontSize: props.size === 'small' ? '17px' : '20px'
+  }), _defineProperty(_ref2, _mediaQueries.phone_max, {
+    fontSize: props.size === 'small' ? '16px' : '18px'
+  }), _ref2;
+});
+
+var standardTextStyle = (_standardTextStyle = {
+  fontSize: '20px',
+  lineHeight: '140%',
+  fontWeight: 'bold',
+  margin: '0'
+}, _defineProperty(_standardTextStyle, _mediaQueries.tablet_max, {
+  fontSize: '18px'
+}), _defineProperty(_standardTextStyle, _mediaQueries.phablet_max, {
+  fontSize: '17px'
+}), _defineProperty(_standardTextStyle, _mediaQueries.phone_max, {
+  fontSize: '16px'
+}), _standardTextStyle);
+
+var P = /*#__PURE__*/exports.P = (0, _reactEmotion2.default)('p', {
+  target: 'e4u1u2g30'
+})(standardTextStyle, function (props) {
+  return {
+    color: colorSelect(props)
+  };
+});
+
+var TextDivP = /*#__PURE__*/exports.TextDivP = (0, _reactEmotion2.default)('div', {
+  target: 'e4u1u2g31'
+})(standardTextStyle, function (props) {
+  return {
+    color: colorSelect(props)
+  };
+});
 //# sourceMappingURL=index.js.map
