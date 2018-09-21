@@ -9,6 +9,19 @@ import {
   hd,      hd_min,      hd_max
 } from '@time-with/media-queries'
 
+const colorSelect = function(props) {
+  switch(props.color) {
+    case 'white': return 'white'
+    case 'grey': return grey
+    case 'blue': return blue
+    case 'green': return green
+    case 'orange': return orange
+    case 'grey_dark': return grey_dark
+    case 'grey_darker': return grey_darker
+    default: return grey
+  }
+}
+
 export const Headline = styled.h1({
   fontFamily: 'proxima-soft',
   color: grey_medium,
@@ -262,3 +275,96 @@ export const DivPhoneOnly = styled.div({
   [phablet]:  { display: 'none' },
   [phone]:    { display: 'block' },
 })
+
+export const Box = styled.div(
+  {
+    padding: '40px',
+    [tablet_max]: {
+      padding: '30px',
+    },
+    [phablet_max]: {
+      padding: '25px',
+    },
+    [phone_max]: {
+      padding: '15px',
+    },
+  },
+  props => ({
+    backgroundColor: props.color ? colorSelect(props) : 'white',
+    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.25)' : 'none',
+    padding: props.noPadding ? '0 !important' : null
+  })
+)
+
+export const H1 = styled.h1(
+  {
+    fontSize: '38px',
+    lineHeight: '120%',
+    fontWeight: 'bold',
+    margin: '0',
+  },
+  props => ({
+    color: colorSelect(props),
+    fontSize: props.size === 'large' ? '40px' : '38px',
+    [tablet_max]: {
+      fontSize: props.size === 'large' ? '36px' : '34px',
+    },
+    [phablet_max]: {
+      fontSize: props.size === 'large' ? '32px' : '30px',
+    },
+    [phone_max]: {
+      fontSize: props.size === 'large' ? '30px' : '26px',
+    },
+  })
+)
+
+export const H3 = styled.h3(
+  {
+    lineHeight: '140%',
+    fontWeight: 'bold',
+    margin: '0',
+  },
+  props => ({
+    color: colorSelect(props),
+    fontSize: props.size === 'small' ? '20px' : '26px',
+    [tablet_max]: {
+      fontSize: props.size === 'small' ? '18px' : '23px',
+    },
+    [phablet_max]: {
+      fontSize: props.size === 'small' ? '17px' : '20px',
+    },
+    [phone_max]: {
+      fontSize: props.size === 'small' ? '16px' : '18px',
+    },
+  })
+)
+
+const standardTextStyle = {
+  fontSize: '20px',
+  lineHeight: '140%',
+  fontWeight: 'bold',
+  margin: '0',
+  [tablet_max]: {
+    fontSize: '18px'
+  },
+  [phablet_max]: {
+    fontSize: '17px'
+  },
+  [phone_max]: {
+    fontSize: '16px'
+  },
+}
+
+export const P = styled.p(
+  standardTextStyle, 
+  props => ({
+    color: colorSelect(props),
+  })
+)
+
+export const TextDivP = styled.div(
+  standardTextStyle, 
+  props => ({
+    color: colorSelect(props),
+  })
+)
