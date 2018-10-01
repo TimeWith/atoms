@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
-import { blue, grey_medium } from '@time-with/colors'
+import { blue, green, orange, grey, grey_medium, grey_dark, grey_darker } from '@time-with/colors'
 import { 
   phone,   phone_min,   phone_max,
   phablet, phablet_min, phablet_max,

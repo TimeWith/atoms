@@ -1,6 +1,6 @@
 {
   "name": "@time-with/atoms",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Basic UI building blocks",
   "main": "dist/index.js",
   "license": "MIT",

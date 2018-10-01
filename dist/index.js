@@ -36,19 +36,19 @@ var colorSelect = function colorSelect(props) {
     case 'white':
       return 'white';
     case 'grey':
-      return grey;
+      return _colors.grey;
     case 'blue':
       return _colors.blue;
     case 'green':
-      return green;
+      return _colors.green;
     case 'orange':
-      return orange;
+      return _colors.orange;
     case 'grey_dark':
-      return grey_dark;
+      return _colors.grey_dark;
     case 'grey_darker':
-      return grey_darker;
+      return _colors.grey_darker;
     default:
-      return grey;
+      return _colors.grey;
   }
 };
 
