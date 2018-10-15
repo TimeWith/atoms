@@ -63,9 +63,9 @@
   version "0.7.3"
   resolved "https://registry.npmjs.org/@emotion/utils/-/utils-0.7.3.tgz#4240c5eee8af86843452af7497ac2808be04a77d"
 
-"@time-with/colors@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/@time-with/colors/-/colors-1.0.6.tgz#58a8bc713b2555756c89f0d00c5f4ee61a339f9e"
+"@time-with/colors@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@time-with/colors/-/colors-1.0.7.tgz#716cff6687b9665821f3df84eeadccc9342f0475"
 
 "@time-with/media-queries@^1.0.4":
   version "1.0.4"

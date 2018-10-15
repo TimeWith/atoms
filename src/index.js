@@ -18,7 +18,7 @@ const colorSelect = function(props) {
     case 'orange': return orange
     case 'grey_dark': return grey_dark
     case 'grey_darker': return grey_darker
-    default: return grey
+    default: return 'transparent'
   }
 }
 
@@ -279,20 +279,36 @@ export const DivPhoneOnly = styled.div({
 export const Box = styled.div(
   {
     padding: '40px',
+    marginBottom: '40px',
     [tablet_max]: {
       padding: '30px',
+      marginBottom: '30px',
     },
     [phablet_max]: {
       padding: '25px',
+      marginBottom: '25px',
     },
     [phone_max]: {
       padding: '15px',
+      marginBottom: '15px',
     },
   },
   props => ({
     backgroundColor: props.color ? colorSelect(props) : 'white',
-    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.25)' : 'none',
+    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
     padding: props.noPadding ? '0 !important' : null
+  })
+)
+
+export const BoxCompact = styled.div(
+  {
+    marginBottom: '12px',
+    textAlign: 'left',
+  },
+  props => ({
+    backgroundColor: props.color ? colorSelect(props) : 'white',
+    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
+    padding: props.noPadding ? '0 !important' : '12px 18px 12px 18px'
   })
 )
 

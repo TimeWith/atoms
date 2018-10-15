@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TextDivP = exports.P = exports.H3 = exports.H1 = exports.Box = exports.DivPhoneOnly = exports.DivPhabletOnly = exports.DivTabletOnly = exports.DivDesktopOnly = exports.DivHdOnly = exports.DivTabletMax = exports.DivPhabletMax = exports.DivDesktopMax = exports.DivPhabletMin = exports.DivTabletMin = exports.DivDesktopMin = exports.DivHdMin = exports.IBDivPhablet = exports.IBDivPhone = exports.IBDiv = exports.Paragraphs = exports.Separator = exports.Tag = exports.Li_underlined = exports.ParagraphLarge = exports.Paragraph = exports.SublineSmall = exports.Subline = exports.Headline6 = exports.Headline5 = exports.Headline4 = exports.Headline3 = exports.Headline2 = exports.Headline = undefined;
+exports.TextDivP = exports.P = exports.H3 = exports.H1 = exports.BoxCompact = exports.Box = exports.DivPhoneOnly = exports.DivPhabletOnly = exports.DivTabletOnly = exports.DivDesktopOnly = exports.DivHdOnly = exports.DivTabletMax = exports.DivPhabletMax = exports.DivDesktopMax = exports.DivPhabletMin = exports.DivTabletMin = exports.DivDesktopMin = exports.DivHdMin = exports.IBDivPhablet = exports.IBDivPhone = exports.IBDiv = exports.Paragraphs = exports.Separator = exports.Tag = exports.Li_underlined = exports.ParagraphLarge = exports.Paragraph = exports.SublineSmall = exports.Subline = exports.Headline6 = exports.Headline5 = exports.Headline4 = exports.Headline3 = exports.Headline2 = exports.Headline = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -48,7 +48,7 @@ var colorSelect = function colorSelect(props) {
     case 'grey_darker':
       return _colors.grey_darker;
     default:
-      return _colors.grey;
+      return 'transparent';
   }
 };
 
@@ -317,23 +317,40 @@ var DivPhoneOnly = /*#__PURE__*/exports.DivPhoneOnly = (0, _reactEmotion2.defaul
 var Box = /*#__PURE__*/exports.Box = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g27'
 })((_styled26 = {
-  padding: '40px'
+  padding: '40px',
+  marginBottom: '40px'
 }, _defineProperty(_styled26, _mediaQueries.tablet_max, {
-  padding: '30px'
+  padding: '30px',
+  marginBottom: '30px'
 }), _defineProperty(_styled26, _mediaQueries.phablet_max, {
-  padding: '25px'
+  padding: '25px',
+  marginBottom: '25px'
 }), _defineProperty(_styled26, _mediaQueries.phone_max, {
-  padding: '15px'
+  padding: '15px',
+  marginBottom: '15px'
 }), _styled26), function (props) {
   return {
     backgroundColor: props.color ? colorSelect(props) : 'white',
-    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.25)' : 'none',
+    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
     padding: props.noPadding ? '0 !important' : null
   };
 });
 
-var H1 = /*#__PURE__*/exports.H1 = (0, _reactEmotion2.default)('h1', {
+var BoxCompact = /*#__PURE__*/exports.BoxCompact = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g28'
+})({
+  marginBottom: '12px',
+  textAlign: 'left'
+}, function (props) {
+  return {
+    backgroundColor: props.color ? colorSelect(props) : 'white',
+    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
+    padding: props.noPadding ? '0 !important' : '12px 18px 12px 18px'
+  };
+});
+
+var H1 = /*#__PURE__*/exports.H1 = (0, _reactEmotion2.default)('h1', {
+  target: 'e4u1u2g29'
 })({
   fontSize: '38px',
   lineHeight: '120%',
@@ -355,7 +372,7 @@ var H1 = /*#__PURE__*/exports.H1 = (0, _reactEmotion2.default)('h1', {
 });
 
 var H3 = /*#__PURE__*/exports.H3 = (0, _reactEmotion2.default)('h3', {
-  target: 'e4u1u2g29'
+  target: 'e4u1u2g30'
 })({
   lineHeight: '140%',
   fontWeight: 'bold',
@@ -389,7 +406,7 @@ var standardTextStyle = (_standardTextStyle = {
 }), _standardTextStyle);
 
 var P = /*#__PURE__*/exports.P = (0, _reactEmotion2.default)('p', {
-  target: 'e4u1u2g30'
+  target: 'e4u1u2g31'
 })(standardTextStyle, function (props) {
   return {
     color: colorSelect(props)
@@ -397,7 +414,7 @@ var P = /*#__PURE__*/exports.P = (0, _reactEmotion2.default)('p', {
 });
 
 var TextDivP = /*#__PURE__*/exports.TextDivP = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g31'
+  target: 'e4u1u2g32'
 })(standardTextStyle, function (props) {
   return {
     color: colorSelect(props)
