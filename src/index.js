@@ -199,6 +199,26 @@ export class Separator extends Component {
   }
 }
 
+export const SeparatorLine = styled.div({
+  backgroundColor: '#F2F2F2',
+  width: '100%',
+  height: '2px',
+  marginTop: '40px',
+  marginBottom: '40px',
+  [tablet_max]: {
+    marginTop: '30px',
+    marginBottom: '30px',
+  },
+  [phablet_max]: {
+    marginTop: '20px',
+    marginBottom: '20px',
+  },
+  [phone_max]: {
+    marginTop: '14px',
+    marginBottom: '14px',
+  },
+})
+
 export class Paragraphs extends Component {
   render() {
     let n = 0

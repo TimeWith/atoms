@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TextDivP = exports.P = exports.H3 = exports.H1 = exports.BoxCompact = exports.Box = exports.DivPhoneOnly = exports.DivPhabletOnly = exports.DivTabletOnly = exports.DivDesktopOnly = exports.DivHdOnly = exports.DivTabletMax = exports.DivPhabletMax = exports.DivDesktopMax = exports.DivPhabletMin = exports.DivTabletMin = exports.DivDesktopMin = exports.DivHdMin = exports.IBDivPhablet = exports.IBDivPhone = exports.IBDiv = exports.Paragraphs = exports.Separator = exports.Tag = exports.Li_underlined = exports.ParagraphLarge = exports.Paragraph = exports.SublineSmall = exports.Subline = exports.Headline6 = exports.Headline5 = exports.Headline4 = exports.Headline3 = exports.Headline2 = exports.Headline = undefined;
+exports.TextDivP = exports.P = exports.H3 = exports.H1 = exports.BoxCompact = exports.Box = exports.DivPhoneOnly = exports.DivPhabletOnly = exports.DivTabletOnly = exports.DivDesktopOnly = exports.DivHdOnly = exports.DivTabletMax = exports.DivPhabletMax = exports.DivDesktopMax = exports.DivPhabletMin = exports.DivTabletMin = exports.DivDesktopMin = exports.DivHdMin = exports.IBDivPhablet = exports.IBDivPhone = exports.IBDiv = exports.Paragraphs = exports.SeparatorLine = exports.Separator = exports.Tag = exports.Li_underlined = exports.ParagraphLarge = exports.Paragraph = exports.SublineSmall = exports.Subline = exports.Headline6 = exports.Headline5 = exports.Headline4 = exports.Headline3 = exports.Headline2 = exports.Headline = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _styled, _styled2, _styled3, _styled4, _styled5, _styled6, _styled7, _styled8, _styled9, _styled10, _styled21, _styled22, _styled23, _styled24, _styled25, _styled26, _standardTextStyle;
+var _styled, _styled2, _styled3, _styled4, _styled5, _styled6, _styled7, _styled8, _styled9, _styled10, _styled12, _styled22, _styled23, _styled24, _styled25, _styled26, _styled27, _standardTextStyle;
 
 var _react = require('react');
 
@@ -216,6 +216,25 @@ var Separator = exports.Separator = function (_Component) {
   return Separator;
 }(_react.Component);
 
+var SeparatorLine = /*#__PURE__*/exports.SeparatorLine = (0, _reactEmotion2.default)('div', {
+  target: 'e4u1u2g12'
+})((_styled12 = {
+  backgroundColor: '#F2F2F2',
+  width: '100%',
+  height: '2px',
+  marginTop: '40px',
+  marginBottom: '40px'
+}, _defineProperty(_styled12, _mediaQueries.tablet_max, {
+  marginTop: '30px',
+  marginBottom: '30px'
+}), _defineProperty(_styled12, _mediaQueries.phablet_max, {
+  marginTop: '20px',
+  marginBottom: '20px'
+}), _defineProperty(_styled12, _mediaQueries.phone_max, {
+  marginTop: '14px',
+  marginBottom: '14px'
+}), _styled12));
+
 var Paragraphs = exports.Paragraphs = function (_Component2) {
   _inherits(Paragraphs, _Component2);
 
@@ -255,80 +274,80 @@ var Paragraphs = exports.Paragraphs = function (_Component2) {
 
 
 var IBDiv = /*#__PURE__*/exports.IBDiv = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g12'
+  target: 'e4u1u2g13'
 })({
   display: 'inline-block',
   verticalAlign: 'top'
 });
 // becomes 100% width on phone
 var IBDivPhone = /*#__PURE__*/exports.IBDivPhone = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g13'
+  target: 'e4u1u2g14'
 })(_defineProperty({
   display: 'inline-block',
   verticalAlign: 'top'
 }, _mediaQueries.phablet_max, { display: 'block', width: '100%' }));
 // becomes 100% width on phablet
 var IBDivPhablet = /*#__PURE__*/exports.IBDivPhablet = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g14'
+  target: 'e4u1u2g15'
 })(_defineProperty({
   display: 'inline-block',
   verticalAlign: 'top'
 }, _mediaQueries.tablet_max, { display: 'block', width: '100%' }));
 
 var DivHdMin = /*#__PURE__*/exports.DivHdMin = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g15'
+  target: 'e4u1u2g16'
 })(_defineProperty({}, _mediaQueries.desktop_max, { display: 'none' }));
 var DivDesktopMin = /*#__PURE__*/exports.DivDesktopMin = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g16'
+  target: 'e4u1u2g17'
 })(_defineProperty({}, _mediaQueries.tablet_max, { display: 'none' }));
 var DivTabletMin = /*#__PURE__*/exports.DivTabletMin = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g17'
+  target: 'e4u1u2g18'
 })(_defineProperty({}, _mediaQueries.phablet_max, { display: 'none' }));
 var DivPhabletMin = /*#__PURE__*/exports.DivPhabletMin = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g18'
+  target: 'e4u1u2g19'
 })(_defineProperty({}, _mediaQueries.phone_max, { display: 'none' }));
 
 var DivDesktopMax = /*#__PURE__*/exports.DivDesktopMax = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g19'
+  target: 'e4u1u2g20'
 })(_defineProperty({}, _mediaQueries.hd_min, { display: 'none' }));
 var DivPhabletMax = /*#__PURE__*/exports.DivPhabletMax = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g20'
+  target: 'e4u1u2g21'
 })(_defineProperty({}, _mediaQueries.tablet_min, { display: 'none' }));
 var DivTabletMax = /*#__PURE__*/exports.DivTabletMax = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g21'
+  target: 'e4u1u2g22'
 })(_defineProperty({}, _mediaQueries.desktop_min, { display: 'none' }));
 
 var DivHdOnly = /*#__PURE__*/exports.DivHdOnly = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g22'
-})((_styled21 = {}, _defineProperty(_styled21, _mediaQueries.hd, { display: 'block' }), _defineProperty(_styled21, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled21, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled21, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled21, _mediaQueries.phone, { display: 'none' }), _styled21));
-var DivDesktopOnly = /*#__PURE__*/exports.DivDesktopOnly = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g23'
-})((_styled22 = {}, _defineProperty(_styled22, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled22, _mediaQueries.desktop, { display: 'block' }), _defineProperty(_styled22, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled22, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled22, _mediaQueries.phone, { display: 'none' }), _styled22));
-var DivTabletOnly = /*#__PURE__*/exports.DivTabletOnly = (0, _reactEmotion2.default)('div', {
+})((_styled22 = {}, _defineProperty(_styled22, _mediaQueries.hd, { display: 'block' }), _defineProperty(_styled22, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled22, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled22, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled22, _mediaQueries.phone, { display: 'none' }), _styled22));
+var DivDesktopOnly = /*#__PURE__*/exports.DivDesktopOnly = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g24'
-})((_styled23 = {}, _defineProperty(_styled23, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled23, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled23, _mediaQueries.tablet, { display: 'block' }), _defineProperty(_styled23, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled23, _mediaQueries.phone, { display: 'none' }), _styled23));
-var DivPhabletOnly = /*#__PURE__*/exports.DivPhabletOnly = (0, _reactEmotion2.default)('div', {
+})((_styled23 = {}, _defineProperty(_styled23, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled23, _mediaQueries.desktop, { display: 'block' }), _defineProperty(_styled23, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled23, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled23, _mediaQueries.phone, { display: 'none' }), _styled23));
+var DivTabletOnly = /*#__PURE__*/exports.DivTabletOnly = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g25'
-})((_styled24 = {}, _defineProperty(_styled24, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled24, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled24, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled24, _mediaQueries.phablet, { display: 'block' }), _defineProperty(_styled24, _mediaQueries.phone, { display: 'none' }), _styled24));
-var DivPhoneOnly = /*#__PURE__*/exports.DivPhoneOnly = (0, _reactEmotion2.default)('div', {
+})((_styled24 = {}, _defineProperty(_styled24, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled24, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled24, _mediaQueries.tablet, { display: 'block' }), _defineProperty(_styled24, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled24, _mediaQueries.phone, { display: 'none' }), _styled24));
+var DivPhabletOnly = /*#__PURE__*/exports.DivPhabletOnly = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g26'
-})((_styled25 = {}, _defineProperty(_styled25, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.phone, { display: 'block' }), _styled25));
+})((_styled25 = {}, _defineProperty(_styled25, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled25, _mediaQueries.phablet, { display: 'block' }), _defineProperty(_styled25, _mediaQueries.phone, { display: 'none' }), _styled25));
+var DivPhoneOnly = /*#__PURE__*/exports.DivPhoneOnly = (0, _reactEmotion2.default)('div', {
+  target: 'e4u1u2g27'
+})((_styled26 = {}, _defineProperty(_styled26, _mediaQueries.hd, { display: 'none' }), _defineProperty(_styled26, _mediaQueries.desktop, { display: 'none' }), _defineProperty(_styled26, _mediaQueries.tablet, { display: 'none' }), _defineProperty(_styled26, _mediaQueries.phablet, { display: 'none' }), _defineProperty(_styled26, _mediaQueries.phone, { display: 'block' }), _styled26));
 
 var Box = /*#__PURE__*/exports.Box = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g27'
-})((_styled26 = {
+  target: 'e4u1u2g28'
+})((_styled27 = {
   padding: '40px',
   marginBottom: '40px'
-}, _defineProperty(_styled26, _mediaQueries.tablet_max, {
+}, _defineProperty(_styled27, _mediaQueries.tablet_max, {
   padding: '30px',
   marginBottom: '30px'
-}), _defineProperty(_styled26, _mediaQueries.phablet_max, {
+}), _defineProperty(_styled27, _mediaQueries.phablet_max, {
   padding: '25px',
   marginBottom: '25px'
-}), _defineProperty(_styled26, _mediaQueries.phone_max, {
+}), _defineProperty(_styled27, _mediaQueries.phone_max, {
   padding: '15px',
   marginBottom: '15px'
-}), _styled26), function (props) {
+}), _styled27), function (props) {
   return {
     backgroundColor: props.color ? colorSelect(props) : 'white',
     boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
@@ -337,7 +356,7 @@ var Box = /*#__PURE__*/exports.Box = (0, _reactEmotion2.default)('div', {
 });
 
 var BoxCompact = /*#__PURE__*/exports.BoxCompact = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g28'
+  target: 'e4u1u2g29'
 })({
   marginBottom: '12px',
   textAlign: 'left'
@@ -350,7 +369,7 @@ var BoxCompact = /*#__PURE__*/exports.BoxCompact = (0, _reactEmotion2.default)('
 });
 
 var H1 = /*#__PURE__*/exports.H1 = (0, _reactEmotion2.default)('h1', {
-  target: 'e4u1u2g29'
+  target: 'e4u1u2g30'
 })({
   fontSize: '38px',
   lineHeight: '120%',
@@ -372,7 +391,7 @@ var H1 = /*#__PURE__*/exports.H1 = (0, _reactEmotion2.default)('h1', {
 });
 
 var H3 = /*#__PURE__*/exports.H3 = (0, _reactEmotion2.default)('h3', {
-  target: 'e4u1u2g30'
+  target: 'e4u1u2g31'
 })({
   lineHeight: '140%',
   fontWeight: 'bold',
@@ -406,7 +425,7 @@ var standardTextStyle = (_standardTextStyle = {
 }), _standardTextStyle);
 
 var P = /*#__PURE__*/exports.P = (0, _reactEmotion2.default)('p', {
-  target: 'e4u1u2g31'
+  target: 'e4u1u2g32'
 })(standardTextStyle, function (props) {
   return {
     color: colorSelect(props)
@@ -414,7 +433,7 @@ var P = /*#__PURE__*/exports.P = (0, _reactEmotion2.default)('p', {
 });
 
 var TextDivP = /*#__PURE__*/exports.TextDivP = (0, _reactEmotion2.default)('div', {
-  target: 'e4u1u2g32'
+  target: 'e4u1u2g33'
 })(standardTextStyle, function (props) {
   return {
     color: colorSelect(props)
