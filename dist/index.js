@@ -7,7 +7,7 @@ exports.TextDivP = exports.P = exports.H3 = exports.H1 = exports.BoxCompact = ex
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _styled, _styled2, _styled3, _styled4, _styled5, _styled6, _styled7, _styled8, _styled9, _styled10, _styled12, _styled22, _styled23, _styled24, _styled25, _styled26, _styled27, _standardTextStyle;
+var _styled, _styled2, _styled3, _styled4, _styled5, _styled6, _styled7, _styled8, _styled9, _styled10, _styled12, _styled22, _styled23, _styled24, _styled25, _styled26, _standardTextStyle;
 
 var _react = require('react');
 
@@ -335,33 +335,32 @@ var DivPhoneOnly = /*#__PURE__*/exports.DivPhoneOnly = (0, _reactEmotion2.defaul
 
 var Box = /*#__PURE__*/exports.Box = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g28'
-})((_styled27 = {
-  padding: '40px',
-  marginBottom: '40px'
-}, _defineProperty(_styled27, _mediaQueries.tablet_max, {
-  padding: '30px',
-  marginBottom: '30px'
-}), _defineProperty(_styled27, _mediaQueries.phablet_max, {
-  padding: '25px',
-  marginBottom: '25px'
-}), _defineProperty(_styled27, _mediaQueries.phone_max, {
-  padding: '15px',
-  marginBottom: '15px'
-}), _styled27), function (props) {
-  return {
+})({}, function (props) {
+  var _ref;
+
+  return _ref = {
     backgroundColor: props.color ? colorSelect(props) : 'white',
     boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
-    padding: props.noPadding ? '0 !important' : null
-  };
+    padding: props.noPadding ? '0px' : '40px',
+    marginBottom: props.noMargin ? '0px' : '40px'
+  }, _defineProperty(_ref, _mediaQueries.tablet_max, {
+    padding: props.noMargin ? '0px' : '30px',
+    marginBottom: props.noPadding ? '0px' : '30px'
+  }), _defineProperty(_ref, _mediaQueries.phablet_max, {
+    padding: props.noPadding ? '0px' : '25px',
+    marginBottom: props.noMargin ? '0px' : '25px'
+  }), _defineProperty(_ref, _mediaQueries.phone_max, {
+    padding: props.noPadding ? '0px' : '15px',
+    marginBottom: props.noMargin ? '0px' : '15px'
+  }), _ref;
 });
 
 var BoxCompact = /*#__PURE__*/exports.BoxCompact = (0, _reactEmotion2.default)('div', {
   target: 'e4u1u2g29'
-})({
-  marginBottom: '12px',
-  textAlign: 'left'
-}, function (props) {
+})({}, function (props) {
   return {
+    textAlign: 'left',
+    marginBottom: props.noMargin ? '0' : '12px',
     backgroundColor: props.color ? colorSelect(props) : 'white',
     boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
     padding: props.noPadding ? '0 !important' : '12px 18px 12px 18px'
@@ -376,18 +375,18 @@ var H1 = /*#__PURE__*/exports.H1 = (0, _reactEmotion2.default)('h1', {
   fontWeight: 'bold',
   margin: '0'
 }, function (props) {
-  var _ref;
+  var _ref2;
 
-  return _ref = {
+  return _ref2 = {
     color: colorSelect(props),
     fontSize: props.size === 'large' ? '40px' : '38px'
-  }, _defineProperty(_ref, _mediaQueries.tablet_max, {
+  }, _defineProperty(_ref2, _mediaQueries.tablet_max, {
     fontSize: props.size === 'large' ? '36px' : '34px'
-  }), _defineProperty(_ref, _mediaQueries.phablet_max, {
+  }), _defineProperty(_ref2, _mediaQueries.phablet_max, {
     fontSize: props.size === 'large' ? '32px' : '30px'
-  }), _defineProperty(_ref, _mediaQueries.phone_max, {
+  }), _defineProperty(_ref2, _mediaQueries.phone_max, {
     fontSize: props.size === 'large' ? '30px' : '26px'
-  }), _ref;
+  }), _ref2;
 });
 
 var H3 = /*#__PURE__*/exports.H3 = (0, _reactEmotion2.default)('h3', {
@@ -397,18 +396,18 @@ var H3 = /*#__PURE__*/exports.H3 = (0, _reactEmotion2.default)('h3', {
   fontWeight: 'bold',
   margin: '0'
 }, function (props) {
-  var _ref2;
+  var _ref3;
 
-  return _ref2 = {
+  return _ref3 = {
     color: colorSelect(props),
     fontSize: props.size === 'small' ? '20px' : '26px'
-  }, _defineProperty(_ref2, _mediaQueries.tablet_max, {
+  }, _defineProperty(_ref3, _mediaQueries.tablet_max, {
     fontSize: props.size === 'small' ? '18px' : '23px'
-  }), _defineProperty(_ref2, _mediaQueries.phablet_max, {
+  }), _defineProperty(_ref3, _mediaQueries.phablet_max, {
     fontSize: props.size === 'small' ? '17px' : '20px'
-  }), _defineProperty(_ref2, _mediaQueries.phone_max, {
+  }), _defineProperty(_ref3, _mediaQueries.phone_max, {
     fontSize: props.size === 'small' ? '16px' : '18px'
-  }), _ref2;
+  }), _ref3;
 });
 
 var standardTextStyle = (_standardTextStyle = {

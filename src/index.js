@@ -296,41 +296,33 @@ export const DivPhoneOnly = styled.div({
   [phone]:    { display: 'block' },
 })
 
-export const Box = styled.div(
-  {
-    padding: '40px',
-    marginBottom: '40px',
-    [tablet_max]: {
-      padding: '30px',
-      marginBottom: '30px',
-    },
-    [phablet_max]: {
-      padding: '25px',
-      marginBottom: '25px',
-    },
-    [phone_max]: {
-      padding: '15px',
-      marginBottom: '15px',
-    },
-  },
-  props => ({
-    backgroundColor: props.color ? colorSelect(props) : 'white',
-    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
-    padding: props.noPadding ? '0 !important' : null
-  })
-)
 
-export const BoxCompact = styled.div(
-  {
-    marginBottom: '12px',
-    textAlign: 'left',
+export const Box = styled.div( {}, props => ({
+  backgroundColor: props.color ? colorSelect(props) : 'white',
+  boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
+  padding: props.noPadding ? '0px' : '40px',
+  marginBottom: props.noMargin ? '0px' : '40px',
+  [tablet_max]: {
+    padding: props.noMargin ? '0px' : '30px',
+    marginBottom: props.noPadding ? '0px' : '30px',
   },
-  props => ({
-    backgroundColor: props.color ? colorSelect(props) : 'white',
-    boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
-    padding: props.noPadding ? '0 !important' : '12px 18px 12px 18px'
-  })
-)
+  [phablet_max]: {
+    padding: props.noPadding ? '0px' : '25px',
+    marginBottom: props.noMargin ? '0px' : '25px',
+  },
+  [phone_max]: {
+    padding: props.noPadding ? '0px' : '15px',
+    marginBottom: props.noMargin ? '0px' : '15px',
+  },
+}))
+
+export const BoxCompact = styled.div({}, props => ({
+  textAlign: 'left',
+  marginBottom: props.noMargin ? '0' : '12px',
+  backgroundColor: props.color ? colorSelect(props) : 'white',
+  boxShadow: props.shadow ? '0 2px 4px 0 rgba(0,0,0,0.15)' : 'none',
+  padding: props.noPadding ? '0 !important' : '12px 18px 12px 18px'
+}))
 
 export const H1 = styled.h1(
   {
