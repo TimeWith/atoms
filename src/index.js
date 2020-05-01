@@ -23,7 +23,6 @@ const colorSelect = function(props) {
 }
 
 export const Headline = styled.h1({
-  fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '64px',
   marginBottom: '10px',
@@ -36,7 +35,6 @@ export const Headline = styled.h1({
 })
 
 export const Headline2 = styled.h2({
-  fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '48px',
   margin: '0',
@@ -49,7 +47,6 @@ export const Headline2 = styled.h2({
 })
 
 export const Headline3 = styled.h3({
-  fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '38px',
   margin: '0',
@@ -62,7 +59,6 @@ export const Headline3 = styled.h3({
 })
 
 export const Headline4 = styled.h4({
-  fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '32px',
   margin: '0',
@@ -75,7 +71,6 @@ export const Headline4 = styled.h4({
 })
 
 export const Headline5 = styled.h5({
-  fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '28px',
   fontWeight: 'bold',
@@ -89,7 +84,6 @@ export const Headline5 = styled.h5({
 })
 
 export const Headline6 = styled.h6({
-  fontFamily: 'proxima-soft',
   color: grey_medium,
   fontSize: '20px',
   fontWeight: 'bold',
@@ -103,7 +97,6 @@ export const Headline6 = styled.h6({
 })
 
 export const Subline = styled.h2({
-  fontFamily: 'proxima-soft',
   fontSize: '36px',
   marginBottom: '10px',
   lineHeight: '38px',
@@ -116,7 +109,6 @@ export const Subline = styled.h2({
 })
 
 export const SublineSmall = styled.h2({
-  fontFamily: 'proxima-soft',
   fontSize: '36px',
   marginBottom: '10px',
   lineHeight: '38px',
@@ -129,7 +121,6 @@ export const SublineSmall = styled.h2({
 })
 
 export const Paragraph = styled.p({
-  fontFamily: 'proxima-soft',
   fontSize: '20px',
   lineHeight: '160%',
   marginBottom: '20px',
@@ -142,7 +133,6 @@ export const Paragraph = styled.p({
 })
 
 export const ParagraphLarge = styled.p({
-  fontFamily: 'proxima-soft',
   fontSize: '26px',
   lineHeight: '160%',
   marginBottom: '20px',
